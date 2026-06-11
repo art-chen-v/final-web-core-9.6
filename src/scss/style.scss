@@ -1,0 +1,42 @@
+@import "./_variables.scss";
+@import "blocks/header.scss";
+@import "blocks/main.scss";
+@import "blocks/menu.scss";
+@import "blocks/responsive.scss";
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "TTLakes", Arial, sans-serif;
+}
+
+body {
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+}

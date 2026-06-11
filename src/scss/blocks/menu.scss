@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 24px;
+
+    &__item {
+        flex: 0 0 auto;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: $font-size-md;
+        padding: $menu-space-xs $space-sm;
+        color: $menu-text-color;
+        border-radius: $radius-sm;
+        border: 2px solid transparent;
+    }
+
+    &__item--active {
+        border-color: $color-accent;
+        background: $color-white;
+    }
+}
