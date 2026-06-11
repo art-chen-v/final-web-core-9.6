@@ -8,82 +8,164 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__container">
-        <div class="header__brand">
-          <a href="#" class="header__icon-button">
-            <img src="./img/burger.svg" alt="menu icon">
+    <div class="app">
+      <aside class="sidebar">
+        <header class="sidebar__header">
+          <button class="sidebar__button sidebar__button--close">
+            <img src="./img/close.svg" alt="close icon">
+          </button>
+          <a class="sidebar__logo">
+            <img src="./img/logo.svg" alt="logo icon">
           </a>
-          <div class="header__divider is-mobile"></div>
-          <a href="#" class="header__icon-button">
-            <img src="./img/logo.svg" alt="logo">
-          </a>
-        </div>
-        <div class="header__actions">
-          <a href="#" class="header__icon-button is-mobile">
-            <img src="./img/call.svg" alt="phone icon">
-          </a>
-          <a href="#" class="header__icon-button is-mobile">
-            <img src="./img/chat.svg" alt="chat icon">
-          </a>
-          <a href="#" class="header__icon-button is-mobile">
-            <img src="./img/profile.svg" alt="logo">
-          </a>
-          <div class="header__divider"></div>
-          <a href="#" class="header__icon-button">
-            <img src="./img/repair.svg" alt="repair icon">
-          </a>
-          <a href="#" class="header__icon-button">
-            <img src="./img/checkstatus.svg" alt="check status icon">
-          </a>
-        </div>
-      </div>
-    </header>
-    <main class="main">
-      <div class="main__container">
-        <div class="main__header ">
-          <h1 class="main__title">Услуги и сервисы</h1>
-          <div class="main__actions">
-            <a href="#" class="main__action-button">
-              <span>Оставить заявку</span>
-              <img src="./img/repair.svg" alt="repair icon">
-            </a>
-            <a href="#" class="main__action-button">
-              <span>Статус ремонта</span>
-              <img src="./img/checkstatus.svg" alt="check status icon">
-            </a>
+          <div class="sidebar__search">
+            <button class="sidebar__button sidebar__button--search">
+              <img src="./img/search.svg" alt="">
+            </button>
           </div>
-        </div>
-        <nav class="menu">
-          <a href="#" class="menu__item menu__item--active">Ремонтируемые бренды</a>
-          <a href="#" class="menu__item">Ремонтируемые устройства</a>
-          <a href="#" class="menu__item">Цены на услуги</a>
-          <a href="#" class="menu__item">Адреса сервисных центров</a>
-          <a href="#" class="menu__item">Специальные цены</a>
-          <a href="#" class="menu__item">Отзывы</a>
+        </header>
+        <nav class="sidebar__nav">
+          <ul class="sidebar__menu">
+            <li class="sidebar__item sidebar__item--active">
+              <a class="sidebar__link" href="#">Ремонт техники</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">Услуги и сервисы</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">Корпоративным клиентам</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">Продавцам техники</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">Партнерам</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">Производителям</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">Наши сервисные центры</a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">Контакты</a>
+            </li>
+          </ul>
         </nav>
-        <div class="main__content">
-          <div class="main__info">
-            <p class="main__description">
-              Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
-              отремонтировать
-              свой ноутбук Dell с официальной гарантией производителя.
-              <br>
-              <br>
-              Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
-              количество
-              постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют
-              нас
-              родным и близким.
-            </p>
-            <button class="main__read-more-button">Читать далее</button>
+        <footer class="sidebar__footer">
+          <ul class="sidebar__actions">
+            <li class="sidebar__action">
+              <button class="sidebar__button sidebar__action-link" href="#">
+                <img src="./img/call.svg" alt="phone icon">
+              </button>
+            </li>
+            <li class="sidebar__action">
+              <button class="sidebar__button sidebar__action-link" href="#">
+                <img src="./img/chat.svg" alt="chat icon">
+              </button>
+            </li>
+            <li class="sidebar__action">
+              <a class="sidebar__button sidebar__action-link" href="#">
+                <img src="./img/profile.svg" alt="profile icon">
+              </a>
+            </li>
+          </ul>
+          <ul class="sidebar__contacts">
+            <li class="sidebar__contact">
+              <span class="sidebar__contact-value sidebar__contact-value--email">mail@cps.com</span>
+            </li>
+            <li class="sidebar__contact">
+              <span class="sidebar__contact-value sidebar__contact-value--phone">8 800 890 8900</span>
+            </li>
+          </ul>
+          <ul class="sidebar__languages">
+            <li class="sidebar__language sidebar__language--active">RU</li>
+            <li class="sidebar__language">EN</li>
+            <li class="sidebar__language">CH</li>
+          </ul>
+        </footer>
+      </aside>
+      <div class="overlay"></div>
+      <div class="content">
+        <header class="header">
+          <div class="header__container">
+            <div class="header__brand">
+              <a href="#" class="header__icon-button">
+                <img src="./img/burger.svg" alt="menu icon">
+              </a>
+              <div class="header__divider is-mobile"></div>
+              <a href="#" class="header__icon-button">
+                <img src="./img/logo.svg" alt="logo">
+              </a>
+            </div>
+            <div class="header__actions">
+              <a href="#" class="header__icon-button is-mobile">
+                <img src="./img/call.svg" alt="phone icon">
+              </a>
+              <a href="#" class="header__icon-button is-mobile">
+                <img src="./img/chat.svg" alt="chat icon">
+              </a>
+              <a href="#" class="header__icon-button is-mobile">
+                <img src="./img/profile.svg" alt="logo">
+              </a>
+              <div class="header__divider"></div>
+              <a href="#" class="header__icon-button">
+                <img src="./img/repair.svg" alt="repair icon">
+              </a>
+              <a href="#" class="header__icon-button">
+                <img src="./img/checkstatus.svg" alt="check status icon">
+              </a>
+            </div>
           </div>
-          <div class="main__image-wrapper">
-            <img src="./img/logo-pic.svg" alt="logo pic" class="main__image">
+        </header>
+        <main class="main">
+          <div class="main__container">
+            <div class="main__header ">
+              <h1 class="main__title">Услуги и сервисы</h1>
+              <div class="main__actions">
+                <a href="#" class="main__action-button">
+                  <span>Оставить заявку</span>
+                  <img src="./img/repair.svg" alt="repair icon">
+                </a>
+                <a href="#" class="main__action-button">
+                  <span>Статус ремонта</span>
+                  <img src="./img/checkstatus.svg" alt="check status icon">
+                </a>
+              </div>
+            </div>
+            <nav class="menu">
+              <a href="#" class="menu__item menu__item--active">Ремонтируемые бренды</a>
+              <a href="#" class="menu__item">Ремонтируемые устройства</a>
+              <a href="#" class="menu__item">Цены на услуги</a>
+              <a href="#" class="menu__item">Адреса сервисных центров</a>
+              <a href="#" class="menu__item">Специальные цены</a>
+              <a href="#" class="menu__item">Отзывы</a>
+            </nav>
+            <div class="main__content">
+              <div class="main__info">
+                <p class="main__description">
+                  Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                  отремонтировать
+                  свой ноутбук Dell с официальной гарантией производителя.
+                  <br>
+                  <br>
+                  Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                  количество
+                  постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь,
+                  советуют
+                  нас
+                  родным и близким.
+                </p>
+                <button class="main__read-more-button">Читать далее</button>
+              </div>
+              <div class="main__image-wrapper">
+                <img src="./img/logo-pic.svg" alt="logo pic" class="main__image">
+              </div>
+            </div>
           </div>
-        </div>
+        </main>
       </div>
-    </main>
+    </div>
+
   </body>
 
 </html>
