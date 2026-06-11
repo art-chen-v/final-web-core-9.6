@@ -1,6 +1,6 @@
 .main {
     &__container {
-        padding: $main-space-md $space-sm 0 $space-sm;
+        padding: $main-space-md $main-space-md 0;
         background-color: $color-bg;
         margin-bottom: 35px;
     }
@@ -36,7 +36,7 @@
     &__title::before {
         content: "";
         position: absolute;
-        left: -16px;
+        left: -$main-space-md;
         top: 0;
         height: 100%;
         width: 4px;

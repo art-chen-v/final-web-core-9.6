@@ -1,0 +1,45 @@
+.swiper {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: $space-xs;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet {
+    width: $swiper-pagination-bullet;
+    height: $swiper-pagination-bullet;
+    background: #DDDDDD;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: $swiper-bullet-bg;
+}
+
+@media (max-width: 500px) {
+    .brands__list {
+        flex-wrap: nowrap;
+    }
+
+    .brands__button--read-more {
+        display: none;
+    }
+}
+
+@media (min-width: 501px) {
+    .swiper {
+        padding: 0;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+}

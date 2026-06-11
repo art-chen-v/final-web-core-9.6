@@ -20,6 +20,11 @@ module.exports = {
 
   module: {
     rules: [
+      // Загружаем CSS из JS
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
       // Транспилируем js с babel
       {
         test: /\.js$/,

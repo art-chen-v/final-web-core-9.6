@@ -1,0 +1,78 @@
+.brands {
+    margin-top: 10px;
+
+    &__content {
+        padding-bottom: 14px;
+    }
+
+    &__header {
+        margin-bottom: 16px;
+        background: linear-gradient(to right, $color-bg, $color-white);
+        margin-right: -40px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: $font-size-md;
+        padding: $space-sm 0;
+        padding-right: $main-space-md;
+        color: #7E7E82;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        row-gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 240px;
+        background-color: $color-white;
+        border: 1px solid $color-divider;
+        border-radius: $radius-sm;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $space-sm;
+    }
+
+    &__logo-wrapper {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 24px 0 0;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 1119px) {
+
+    .brands__list.is-collapsed .brands__item:nth-child(n + 7) {
+        display: none;
+    }
+
+    .brands__item {
+        width: 224px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .brands__list.is-collapsed .brands__item:nth-child(n + 9) {
+        display: none;
+    }
+
+    .brands__item {
+        width: 240px;
+    }
+}
