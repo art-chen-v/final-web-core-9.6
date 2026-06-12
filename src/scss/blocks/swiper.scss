@@ -16,22 +16,12 @@
 .swiper-pagination-bullet {
     width: $swiper-pagination-bullet;
     height: $swiper-pagination-bullet;
-    background: #DDDDDD;
+    background: $swiper-bullet-bg;
     opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-    background: $swiper-bullet-bg;
-}
-
-@media (max-width: 500px) {
-    .brands__list {
-        flex-wrap: nowrap;
-    }
-
-    .brands__button--read-more {
-        display: none;
-    }
+    background: $menu-text-color;
 }
 
 @media (min-width: 501px) {

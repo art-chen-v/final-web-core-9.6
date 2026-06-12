@@ -1,27 +1,35 @@
 import '../scss/style.scss'
 
 // Swiper logic
-let swiper = null;
+let swipers = [];
+
+function destroySwipers() {
+    swipers.forEach(s => s.destroy(true, true));
+    swipers = [];
+}
 
 function initSwiper() {
-    if (window.innerWidth <= 500) {
-        if (!swiper) {
-            swiper = new Swiper('.swiper', {
-                slidesPerView: 1.3,
-                spaceBetween: 16,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-        }
-    } else {
-        if (swiper) {
-            swiper.destroy(true, true);
-            swiper = null;
-        }
+    const isMobile = window.innerWidth <= 500;
+    const elements = document.querySelectorAll('.swiper');
+
+    if (!isMobile) {
+        destroySwipers();
+        return;
     }
+
+    if (swipers.length) return;
+
+    elements.forEach(el => {
+        swipers.push(new Swiper(el, {
+            slidesPerView: 1.3,
+            spaceBetween: 16,
+            loop: true,
+            pagination: {
+                el: el.querySelector('.swiper-pagination'),
+                clickable: true,
+            },
+        }));
+    });
 }
 
 initSwiper();
@@ -50,13 +58,31 @@ closeBtn.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
 
 // Expand / Collapse logic
-const button = document.querySelector('.brands__button--read-more');
-const list = document.querySelector('.brands__list');
-const buttonText = button.querySelector('.brands__button-text');
-const buttonIcon = button.querySelector('.brands__button-icon');
+// Brands
+const brandsButton = document.querySelector('.brands__button--read-more');
 
-button.addEventListener('click', () => {
+brandsButton.addEventListener('click', () => {
+    let list = document.querySelector('.brands__list');
+    let buttonText = brandsButton.querySelector('.brands__button-text');
+    let buttonIcon = brandsButton.querySelector('.brands__button-icon');
 
+    list.classList.toggle('is-collapsed');
+    if (list.classList.contains('is-collapsed')) {
+        buttonText.textContent = 'Показать все';
+        buttonIcon.src = './img/expand.svg'
+    } else {
+        buttonText.textContent = 'Скрыть';
+        buttonIcon.src = './img/collapse.svg'
+    }
+});
+
+// Equipment
+const equipmentButton = document.querySelector('.equipment__button--read-more');
+
+equipmentButton.addEventListener('click', () => {
+    let list = document.querySelector('.equipment__list');
+    let buttonText = equipmentButton.querySelector('.equipment__button-text');
+    let buttonIcon = equipmentButton.querySelector('.equipment__button-icon');
     list.classList.toggle('is-collapsed');
     if (list.classList.contains('is-collapsed')) {
         buttonText.textContent = 'Показать все';
