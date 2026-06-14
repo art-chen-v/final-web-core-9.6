@@ -6,7 +6,9 @@
 @import "blocks/responsive.scss";
 @import "blocks/brands.scss";
 @import "blocks/equipment.scss";
+@import "blocks/prices.scss";
 @import "blocks/swiper.scss";
+@import "blocks/footer";
 
 @font-face {
   font-family: "TTLakes";
@@ -69,6 +71,7 @@ button {
 
 .app {
   display: flex;
+  background-color: $color-bg;
 }
 
 .content {

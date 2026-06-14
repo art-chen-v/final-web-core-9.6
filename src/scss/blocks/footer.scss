@@ -1,0 +1,12 @@
+.app-footer {
+  display: flex;
+  padding: 24px;
+  flex-wrap: wrap;
+  gap: $space-sm;
+  row-gap: $space-sm;
+  color: $menu-text-color;
+
+  & p {
+    flex: 1;
+  }
+}

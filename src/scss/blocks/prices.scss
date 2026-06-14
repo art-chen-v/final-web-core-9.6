@@ -1,0 +1,208 @@
+.prices {
+  margin-top: $section-space-sm;
+  border-radius: 6px;
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  &__header-row {
+    text-align: left;
+  }
+
+  &__header {
+    font-weight: 400;
+    font-size: $font-size-small;
+    color: $menu-text-color;
+    padding-left: 24px;
+    padding-bottom: $space-sm;
+  }
+
+  &__cell {
+    position: relative;
+    padding: 24px 16px;
+    background: $color-white;
+  }
+
+  &__row {
+    position: relative;
+  }
+
+  &__row:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-image: linear-gradient(to right,
+    transparent 24px,
+    $color-divider 24px,
+    $color-divider calc(100% - 24px),
+    transparent calc(100% - 24px));
+    pointer-events: none;
+  }
+
+  &__button {
+    padding-left: 12px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    height: 32px;
+    border: none;
+    border-radius: 16px;
+    background-color: $color-pink;
+    color: $color-white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &__cell:last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__row:first-child td:first-child {
+    border-top-left-radius: 8px;
+  }
+
+  &__row:first-child td:last-child {
+    border-top-right-radius: 8px;
+  }
+
+  &__row:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+  }
+
+  &__row:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+  }
+
+  &__note {
+    margin-top: $space-lg;
+    max-width: 35%;
+    color: $color-text;
+  }
+
+  &__note-text {
+    font-weight: 400;
+    font-size: $font-size-small;
+  }
+
+  &__note-link {
+    display: block;
+    font-weight: 500;
+    font-size: $font-size-md;
+    margin-top: $space-sm;
+  }
+
+  &__note-icon {
+    color: $color-pink;
+    vertical-align: middle;
+    margin-left: $space-xs;
+  }
+
+
+  // &__content {
+  //     padding-bottom: 14px;
+  // }
+
+  // &__header {
+  //     margin-bottom: 16px;
+  //     background: linear-gradient(to right, $color-bg, $color-white);
+  //     margin-right: -40px;
+  // }
+
+  // &__title {
+  //     font-weight: 400;
+  //     font-size: $font-size-md;
+  //     padding: $space-sm 0;
+  //     padding-right: $main-space-md;
+  //     color: #7E7E82;
+  // }
+
+  // &__list {
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 26px;
+  //     row-gap: $space-sm;
+  //     flex-wrap: wrap;
+  // }
+
+  // &__item {
+  //     width: 240px;
+  //     height: 160px;
+  //     background-color: $color-white;
+  //     border: 1px solid $color-divider;
+  //     border-radius: $radius-sm;
+  // }
+
+  // &__link {
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: space-between;
+  //     height: 100%;
+  // }
+
+  // &__text {
+  //     padding: $space-sm $space-sm 0;
+  //     align-self: flex-start;
+  //     font-weight: 500;
+  //     font-size: $font-size-md;
+  // }
+
+  // &__link img {
+  //     padding: 0 $space-sm $space-sm;
+  //     align-self: flex-end;
+  // }
+
+  // &__logo-wrapper {
+  //     height: 40px;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  // }
+
+  // &__button {
+  //     display: flex;
+  //     align-items: center;
+  //     gap: 8px;
+  //     margin: 24px 0 0;
+  // }
+}
+
+// @media (max-width: 500px) {
+//     .prices__list {
+//         flex-wrap: nowrap;
+//     }
+
+//     .prices__button--read-more {
+//         display: none;
+//     }
+// }
+
+// @media (min-width: 501px) and (max-width: 1119px) {
+
+//     .prices__list.is-collapsed .prices__item:nth-child(n + 4) {
+//         display: none;
+//     }
+
+//     .prices__item {
+//         width: 224px;
+//     }
+// }
+
+// @media (min-width: 1120px) {
+//     .prices__list.is-collapsed .prices__item:nth-child(n + 5) {
+//         display: none;
+//     }
+
+//     .prices__item {
+//         width: 240px;
+//     }
+// }
