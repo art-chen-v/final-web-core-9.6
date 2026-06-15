@@ -36,28 +36,24 @@
 
   &__cell {
     position: relative;
-    padding: 24px 12px;
+    padding: 24px 8px;
     background: $color-white;
     font-weight: 400;
     font-size: $font-size-small;
   }
 
-  &__row {
+  &__row td {
     position: relative;
   }
 
-  &__row:not(:last-child)::after {
+  &__row:not(:last-child) td::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     height: 1px;
-    background-image: linear-gradient(to right,
-    transparent $space-sm,
-    $color-divider $space-sm,
-    $color-divider calc(100% - $space-sm),
-    transparent calc(100% - $space-sm));
+    background-color: $color-divider;
     pointer-events: none;
   }
 
